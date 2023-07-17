@@ -8,7 +8,6 @@ export const MainPage = () => {
 
   return (
     <div>
-      <div>HELLO START</div>
       {isLoading ? <Loader /> : <Navigate to="/bears-list" />}
     </div>
   );
