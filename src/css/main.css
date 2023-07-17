@@ -1,0 +1,241 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  padding-top: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.video {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.bears__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.bears__item {
+  /* width: calc(33.3333% - 3 * 15px); */
+  border: 1px solid gray;
+  border-radius: 20px;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out,
+    box-shadow 350ms ease-in;
+  transform-origin: top left;
+  overflow: hidden;
+  height: 350px;
+}
+
+.bears__item:hover {
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+.bears__item a {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 15px;
+}
+
+.bears__img {
+  width: auto;
+}
+
+.bears__description {
+  display: block;
+  display: -webkit-box;
+  max-width: 400px;
+
+  -webkit-line-clamp: 4; /* количество строк */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.bears__header {
+  display: block;
+  display: -webkit-box;
+  max-width: 400px;
+
+  -webkit-line-clamp: 1; /* количество строк */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.bears__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.choosed {
+  background-color: violet;
+  transform: scale(0.95);
+}
+
+.delete-button {
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  outline: unset;
+  border: unset;
+  right: 10%;
+  bottom: 5%;
+  border-radius: 50%;
+  border: 1px solid gray;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 350ms ease-in;
+}
+
+.delete-button:hover {
+  transform: scale(1.25);
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  /* padding: 5px; */
+  position: absolute;
+  color: green;
+  top: -10px;
+  right: -10px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  background-color: white;
+  font-weight: 700;
+}
+
+.bear__page {
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  color: white;
+
+}
+
+.headers {
+  font-weight: 700;
+  color: red;
+}
+
+.bear__title {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bear__title .bears__img {
+  height: 500px;
+}
+
+.react-tabs {
+  width: 70%;
+}
+
+.tab-panel__content-wrapper {
+  display: flex;
+}
+
+.ingredients__list {
+  margin-left: 5px;
+}
+
+.brewers__tips {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.value-span {
+  color: white;
+}
+
+.back-btn {
+  /* position: absolute;
+  top: 2%;
+  left: 2%; */
+  border: 1px solid gray;
+  border-radius: 50%;
+width: 60px;
+height: 60px;
+display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn a {
+  transition: transform 350ms ease-in;
+  display: inline-block;
+}
+
+.back-btn svg {
+  transition: fill 350ms ease-in;
+  display: inline-block;
+}
+
+.back-btn:hover a {
+  transform: scale(1.25);
+}
+.back-btn:hover svg {
+  fill: green;
+}
+
+.description-tooltip {
+  max-width: 250px;
+}
+
+.outer::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2); /* цвет зоны отслеживания */
+  margin-left: 5px;
+}
+
+.outer::-webkit-scrollbar {
+  width: 12px; /* ширина всей полосы прокрутки */
+}
+
+.outer::-webkit-scrollbar-thumb {
+  background-color: violet;    /* цвет бегунка */
+  border-radius: 5px;       /* округлось бегунка */
+}
+
+.ingredients-wrapper{
+  height:550px;
+  overflow-y: scroll;
+}
+
+.ingredients-wrapper::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2); /* цвет зоны отслеживания */
+  margin-left: 5px;
+}
+
+.ingredients-wrapper::-webkit-scrollbar {
+  width: 12px; /* ширина всей полосы прокрутки */
+}
+
+.ingredients-wrapper::-webkit-scrollbar-thumb {
+  background-color: violet;    /* цвет бегунка */
+  border-radius: 5px;       /* округлось бегунка */
+}
