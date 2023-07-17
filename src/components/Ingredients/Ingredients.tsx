@@ -1,7 +1,8 @@
 import { Icon } from "../Icon/Icon";
 import { IngredientsList } from "../IngredientsList/IngredientsList";
+import { IIngredients } from "../interfaces/Ingredients.interface";
 
-export const Ingredients = ({ingredients, method, brewers_tips}) => {
+export const Ingredients = ({ingredients, method, brewers_tips}:IIngredients) => {
   return (
     <div className="ingredients-wrapper">
       <div className="tab-panel__content-wrapper">

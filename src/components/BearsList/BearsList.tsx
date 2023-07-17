@@ -2,25 +2,26 @@ import { useBearsStore } from "../../store/store";
 import { shallow } from "zustand/shallow";
 import useVirtual from "react-cool-virtual";
 import { BearCard } from "../BearCard/BearCard";
+import { IsDeletedBear } from "../interfaces/IsDeletedBear.type";
 
 export const BearsList = () => {
   const { bears, toggleChoosenItem } = useBearsStore(state => state, shallow);
-  const { outerRef, innerRef, items } = useVirtual({
-    itemCount: 15, 
-    itemSize: 380, 
+  const { outerRef, innerRef, items } = useVirtual<HTMLDivElement>({
+    itemCount: 15,
+    itemSize: 320,
   });
 
-  const handleClick = (e, id) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>, id: number) => {
     e.preventDefault();
     toggleChoosenItem(id);
   };
 
-  const bearsItems = bears.filter(({ isDeleted }) => !isDeleted);
+  const bearsItems = bears.filter(({ isDeleted }: IsDeletedBear) => !isDeleted);
 
   return (
     <div
       className="outer"
-      style={{ width: "700px", height: "750px", overflow: "auto" }}
+      style={{ width: "700px", height: "620px", overflow: "auto" }}
       ref={outerRef}>
       <div ref={innerRef}>
         {items.map(({ index, size }) => {
@@ -41,7 +42,6 @@ export const BearsList = () => {
           );
         })}
       </div>
-
     </div>
   );
 };

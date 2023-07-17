@@ -1,4 +1,11 @@
-export const Description = ({first_brewed,description, contributed_by, food_pairing}) => {
+import { IDescription } from "../interfaces/Description.interface";
+
+export const Description = ({
+  first_brewed,
+  description,
+  contributed_by,
+  food_pairing,
+}: IDescription) => {
   return (
     <>
       <p>

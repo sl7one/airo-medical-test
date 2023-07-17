@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
+import { IBearCard } from "../interfaces/BearCard.interface";
 
 export const BearCard = ({
   index,
@@ -10,9 +11,9 @@ export const BearCard = ({
   image_url,
   description,
   handleClick,
-}) => {
-    
-  const gradient = index =>
+}: IBearCard) => {
+  
+  const gradient = (index: number) =>
     `linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(${200 + index * 5},${
       100 + index * 5
     },${200},1) 100%)`;
@@ -23,7 +24,7 @@ export const BearCard = ({
       <div
         className={isChoosed ? "bears__item choosed" : "bears__item"}
         key={id}
-        onContextMenu={e => handleClick(e, id)}>
+        onContextMenu={e=> handleClick(e, id)}>
         <Link
           to={"/bears-list/" + name}
           style={{

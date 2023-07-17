@@ -26,14 +26,13 @@ body {
 }
 
 .bears__item {
-  /* width: calc(33.3333% - 3 * 15px); */
   border: 1px solid gray;
   border-radius: 20px;
   transition: background-color 250ms ease-in-out, transform 250ms ease-in-out,
     box-shadow 350ms ease-in;
   transform-origin: top left;
   overflow: hidden;
-  height: 350px;
+  height: 300px;
 }
 
 .bears__item:hover {
@@ -131,7 +130,6 @@ body {
   padding: 15px;
   gap: 15px;
   color: white;
-
 }
 
 .headers {
@@ -179,9 +177,9 @@ body {
   left: 2%; */
   border: 1px solid gray;
   border-radius: 50%;
-width: 60px;
-height: 60px;
-display: inline-flex;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
@@ -208,7 +206,7 @@ display: inline-flex;
 }
 
 .outer::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.2); /* цвет зоны отслеживания */
+  background: rgba(0, 0, 0, 0.2); /* цвет зоны отслеживания */
   margin-left: 5px;
 }
 
@@ -217,17 +215,17 @@ display: inline-flex;
 }
 
 .outer::-webkit-scrollbar-thumb {
-  background-color: violet;    /* цвет бегунка */
-  border-radius: 5px;       /* округлось бегунка */
+  background-color: violet; /* цвет бегунка */
+  border-radius: 5px; /* округлось бегунка */
 }
 
-.ingredients-wrapper{
-  height:550px;
+.ingredients-wrapper {
+  height: 550px;
   overflow-y: scroll;
 }
 
 .ingredients-wrapper::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.2); /* цвет зоны отслеживания */
+  background: rgba(0, 0, 0, 0.2); /* цвет зоны отслеживания */
   margin-left: 5px;
 }
 
@@ -236,6 +234,6 @@ display: inline-flex;
 }
 
 .ingredients-wrapper::-webkit-scrollbar-thumb {
-  background-color: violet;    /* цвет бегунка */
-  border-radius: 5px;       /* округлось бегунка */
+  background-color: violet; /* цвет бегунка */
+  border-radius: 5px; /* округлось бегунка */
 }
