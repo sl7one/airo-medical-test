@@ -3,9 +3,13 @@ import { shallow } from "zustand/shallow";
 import useVirtual from "react-cool-virtual";
 import { BearCard } from "../BearCard/BearCard";
 import { IsDeletedBear } from "../interfaces/IsDeletedBear.type";
+import { Loader } from "../Loader/Loader";
 
 export const BearsList = () => {
-  const { bears, toggleChoosenItem } = useBearsStore(state => state, shallow);
+  const { bears, toggleChoosenItem, isLoading } = useBearsStore(
+    state => state,
+    shallow
+  );
   const { outerRef, innerRef, items } = useVirtual<HTMLDivElement>({
     itemCount: 15,
     itemSize: 320,
@@ -24,23 +28,28 @@ export const BearsList = () => {
       style={{ width: "700px", height: "620px", overflow: "auto" }}
       ref={outerRef}>
       <div ref={innerRef}>
-        {items.map(({ index, size }) => {
-          const { id, name, image_url, description, isChoosed } =
-            bearsItems[index];
-          return (
-            <BearCard
-              key={index}
-              index={index}
-              size={size}
-              isChoosed={isChoosed}
-              id={id}
-              name={name}
-              image_url={image_url}
-              description={description}
-              handleClick={handleClick}
-            />
-          );
-        })}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          items.map(({ index, size }) => {
+            const { id, name, image_url, description, isChoosed } =
+              bearsItems[index];
+
+            return (
+              <BearCard
+                key={index}
+                index={index}
+                size={size}
+                isChoosed={isChoosed}
+                id={id}
+                name={name}
+                image_url={image_url}
+                description={description}
+                handleClick={handleClick}
+              />
+            );
+          })
+        )}
       </div>
     </div>
   );
