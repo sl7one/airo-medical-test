@@ -6,7 +6,7 @@ To use the application, follow next steps:
 2. Install dependencies: `npm install`.
 3. Start the development server: `npm start`
 
-or follow this link [link](https://sl7one.github.io/airo-medical-test/)
+or follow this link [https://sl7one.github.io/airo-medical-test/](https://sl7one.github.io/airo-medical-test/)
 
 ### Technologies
 
