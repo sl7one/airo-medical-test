@@ -20,13 +20,12 @@ export const BearCard = ({
 
   return (
     <div style={{ height: `${size}px` }}>
-      {/* ---------------------------------- */}
       <div
         className={isChoosed ? "bears__item choosed" : "bears__item"}
         key={id}
         onContextMenu={e=> handleClick(e, id)}>
         <Link
-          to={"/bears-list/" + name}
+          to={"bears-list/" + name}
           style={{
             backgroundImage: gradient(index),
           }}>
@@ -54,7 +53,6 @@ export const BearCard = ({
           <img className="bears__img" src={image_url} alt={name} />
         </Link>
       </div>
-      {/* ----------------------------------- */}
     </div>
   );
 };

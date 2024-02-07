@@ -8,7 +8,6 @@ import { BackBtn } from "../components/BackBtn/BackBtn";
 import { Description } from "../components/Description/Description";
 import { Characteristics } from "../components/Characteristics/Characteristics";
 import { Ingredients } from "../components/Ingredients/Ingredients";
-import { VideoBackground } from "../components/VideoBackground/VideoBackground";
 
 export const BearPage = () => {
   const { name } = useParams();
@@ -29,12 +28,8 @@ export const BearPage = () => {
     image_url,
     ingredients,
     method,
-    // isChoosed,
     ph,
     srm,
-    // tagline,
-    // target_fg,
-    // target_og,
     volume,
   } = item;
 
@@ -85,7 +80,6 @@ export const BearPage = () => {
           </Tabs>
         </div>
       </div>
-      <VideoBackground />
     </>
   );
 };

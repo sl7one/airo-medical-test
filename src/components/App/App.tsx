@@ -1,15 +1,15 @@
 import { BearPage } from "../../pages/BearPage";
 import { BearsListPage } from "../../pages/BearsListPage";
-// import { MainPage } from "../../pages/MainPage";
 import { Routes, Route } from "react-router-dom";
-import { MainPage } from "../../pages/MainPage";
+import { Layout } from "../../pages/Layout";
 
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/bears-list" element={<BearsListPage />} />
-      <Route path="/bears-list/:name" element={<BearPage />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<BearsListPage />} />
+        <Route path="bears-list/:name" element={<BearPage />} />
+      </Route>
     </Routes>
   );
 };
